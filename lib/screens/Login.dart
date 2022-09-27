@@ -1,10 +1,8 @@
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _MyHomePageState();
@@ -18,12 +16,12 @@ class _MyHomePageState extends State<LoginPage> {
           elevation: 0,
           backgroundColor: Colors.white,
           leading: Padding(
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: IconButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Colors.black,
                 )),
@@ -34,10 +32,10 @@ class _MyHomePageState extends State<LoginPage> {
           child: Center(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   "Welcome back",
                   textAlign: TextAlign.end,
                   style: TextStyle(
@@ -45,10 +43,10 @@ class _MyHomePageState extends State<LoginPage> {
                       color: Colors.black,
                       fontSize: 30),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 60,
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
                   child: TextField(
                     decoration: InputDecoration(
@@ -57,7 +55,7 @@ class _MyHomePageState extends State<LoginPage> {
                         border: OutlineInputBorder()),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
                   child: TextField(
                     decoration: InputDecoration(
@@ -67,34 +65,32 @@ class _MyHomePageState extends State<LoginPage> {
                   ),
                 ),
                 Container(
+                    width: 280,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: new AppColors().wine,
+                    ),
                     child: TextButton(
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => LoginPage(
-                                        title: "credio",
-                                      )));
+                                  builder: (context) => const LoginPage()));
                         },
-                        child: Text(
+                        child: const Text(
                           "Log in",
                           style: TextStyle(color: Colors.white),
-                        )),
-                    width: 280,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
-                      color: new AppColors().wine,
-                    )),
+                        ))),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Forget password"),
+                      const Text("Forget password"),
                       TextButton(
                           onPressed: () {},
-                          child: Text(
-                            "Rest now ?",
+                          child: const Text(
+                            "Reset now ?",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 47, 121, 52)),
                           ))

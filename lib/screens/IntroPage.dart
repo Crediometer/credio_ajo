@@ -12,22 +12,22 @@ class IntroPage extends StatefulWidget {
 
 class _MyHomePageState extends State<IntroPage> {
   PageController controller = PageController();
-  List<Widget> _list = <Widget>[
-    new Center(
+  final List<Widget> _list = <Widget>[
+    Center(
         child: Container(
-      decoration: BoxDecoration(color: Colors.white),
-      child: new Pages(
-        text: "100% Secure Thrifting",
+      decoration: const BoxDecoration(color: Colors.white),
+      child: Pages(
+        text: "100% Secure Thrift",
         message:
             "Safe and secured saving made possible, personally and your peers inclusive",
         source: Image.asset("assets/images/credit.png"),
         nextBtn: null,
       ),
     )),
-    new Center(
+    Center(
         child: Container(
-      decoration: BoxDecoration(color: Colors.white),
-      child: new Pages(
+      decoration: const BoxDecoration(color: Colors.white),
+      child: Pages(
         text: "Track your thrift savings",
         message:
             "Nothing is more interesting than watching how your money grow",
@@ -35,16 +35,16 @@ class _MyHomePageState extends State<IntroPage> {
         nextBtn: null,
       ),
     )),
-    new Center(
+    Center(
         child: Container(
-      decoration: BoxDecoration(color: Colors.white),
-      child: new Pages(
+      decoration: const BoxDecoration(color: Colors.white),
+      child: Pages(
         text: "A better way of saving",
         message: "Life is made with saving with credio",
         source: Image.asset("assets/images/pana.png"),
         nextBtn: TextButton(
             onPressed: () {},
-            child: Text(
+            child: const Text(
               "Get Started",
               style: TextStyle(color: Colors.white),
             )),
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<IntroPage> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Text("Credio"),
+        title: const Text("Credio"),
         elevation: 0,
         backgroundColor: Colors.white,
         actions: <Widget>[
@@ -69,22 +69,21 @@ class _MyHomePageState extends State<IntroPage> {
                 Text(
                   "Skip",
                   style: TextStyle(
-                      color: new AppColors().wine, fontWeight: FontWeight.bold),
+                      color: AppColors().wine, fontWeight: FontWeight.bold),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: IconButton(
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginPage(
-                                      title: "credio",
-                                    )));
+                              builder: (context) => const LoginPage(),
+                            ));
                       },
                       icon: Icon(
                         Icons.arrow_forward,
-                        color: new AppColors().wine,
+                        color: AppColors().wine,
                       )),
                 ),
               ],
@@ -93,7 +92,6 @@ class _MyHomePageState extends State<IntroPage> {
         ],
       ),
       body: PageView(
-        children: _list,
         scrollDirection: Axis.horizontal,
         // reverse: true,
         // physics: BouncingScrollPhysics(),
@@ -103,21 +101,25 @@ class _MyHomePageState extends State<IntroPage> {
             _curr = num;
           });
         },
+        children: _list,
       ),
     );
   }
 }
 
 class Pages extends StatelessWidget {
-  final text;
-  var message;
-  var source;
-  var nextBtn;
+  String text;
+  String message;
+  Widget source;
+  Widget? nextBtn;
+
   Pages(
-      {required this.text,
+      {Key? key,
+      required this.text,
       required this.message,
       required this.source,
-      required this.nextBtn});
+      this.nextBtn})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -125,36 +127,36 @@ class Pages extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(50),
+              padding: const EdgeInsets.all(50),
               child: source,
             ),
             Text(
               text,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(50, 15, 50, 15),
+              padding: const EdgeInsets.fromLTRB(50, 15, 50, 15),
               child: Text(
                 message,
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.ltr,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 44, 43, 43)),
               ),
             ),
             Container(
-              child: nextBtn,
               width: 250,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                color: new AppColors().wine,
+                color: AppColors().wine,
               ),
+              child: nextBtn,
             )
           ]),
     );

@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:credio/screens/IntroPage.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
@@ -23,15 +24,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   startTime() async {
-    var duration = new Duration(seconds: 5);
-    return new Timer(duration, route);
+    var duration = Duration(seconds: 5);
+    return Timer(duration, route);
   }
 
   route() {
     Navigator.push(
         context,
         MaterialPageRoute(
-            builder: (context) => IntroPage(
+            builder: (context) => const IntroPage(
                   title: "Credio",
                 )));
   }
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Text(
           "Credio.",
           style: TextStyle(
-              color: new AppColors().wine,
+              color: AppColors().wine,
               fontSize: 55,
               fontWeight: FontWeight.bold),
         ),

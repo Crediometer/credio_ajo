@@ -1,7 +1,4 @@
 import 'package:credio/screens/GroupSavings.dart';
-import 'package:credio/screens/HomPage.dart';
-import 'package:credio/screens/IntroPage.dart';
-import 'package:credio/screens/Login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,9 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(),
-      home: new LoginPage(title: "Jilo"),
+      //home: const LoginPage(title: "Jilo"),
+      // home: const IntroPage(
+      //   title: 'dgju',
+      // ),
+      home: const GroupSavings(),
     );
   }
 }
