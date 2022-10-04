@@ -1,5 +1,6 @@
 import 'package:credio/screens/empty.dart';
 import 'package:credio/screens/fragments/home.dart';
+import 'package:credio/screens/fragments/people.dart';
 import 'package:credio/screens/fragments/transactions.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,13 @@ class MyIndexPage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyIndexPage> {
   int _pages = 0;
-  var screens = [new MyHomeFragment(), new TransactionPage()];
+  var screens = [
+    new MyHomeFragment(),
+    new TransactionPage(),
+    new PeopleFragment()
+  ];
+
+  var appTitles = ["", "Transaction", "Contacts", "Profile"];
 
   void toggleScreen(int screen) {
     setState(() {
@@ -40,18 +47,18 @@ class _MyHomePageState extends State<MyIndexPage> {
         ),
         toolbarHeight: 70,
         backgroundColor: Colors.white,
-        elevation: (_pages == 1) ? 3 : 0,
-        leadingWidth: (_pages == 1) ? 50 : 400,
-        title: (_pages == 1)
+        elevation: (_pages == 1 || _pages == 2) ? 3 : 0,
+        leadingWidth: (_pages >= 1) ? 50 : 400,
+        title: (_pages >= 1)
             ? Center(
                 child: Text(
                   textAlign: TextAlign.center,
-                  "Transaction",
+                  appTitles[_pages],
                   style: TextStyle(color: Colors.black),
                 ),
               )
             : null,
-        leading: (_pages == 1)
+        leading: (_pages >= 1)
             ? IconButton(
                 onPressed: () {
                   toggleScreen(_pages - 1);
@@ -95,6 +102,7 @@ class _MyHomePageState extends State<MyIndexPage> {
       ),
       body: getScreen(),
       bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           elevation: 10,
           fixedColor: Colors.grey,
           backgroundColor: Colors.white,
@@ -128,10 +136,21 @@ class _MyHomePageState extends State<MyIndexPage> {
                 icon: IconButton(
                     iconSize: 30,
                     onPressed: () {
+                      toggleScreen(2);
+                    },
+                    icon: Icon(Icons.people,
+                        color: (_pages == 2)
+                            ? new AppColors().wine
+                            : Colors.grey)),
+                label: "People"),
+            BottomNavigationBarItem(
+                icon: IconButton(
+                    iconSize: 30,
+                    onPressed: () {
                       toggleScreen(3);
                     },
                     icon: Icon(Icons.person,
-                        color: (_pages == 2)
+                        color: (_pages == 3)
                             ? new AppColors().wine
                             : Colors.grey)),
                 label: "Profile"),
