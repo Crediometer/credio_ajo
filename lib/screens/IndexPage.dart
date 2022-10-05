@@ -1,4 +1,3 @@
-import 'package:credio/screens/empty.dart';
 import 'package:credio/screens/fragments/home.dart';
 import 'package:credio/screens/fragments/people.dart';
 import 'package:credio/screens/fragments/transactions.dart';
@@ -16,10 +15,10 @@ class MyIndexPage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyIndexPage> {
   int _pages = 0;
-  var screens = [
-    new MyHomeFragment(),
-    new TransactionPage(),
-    new PeopleFragment()
+  List<Widget> screens = [
+    const MyHomeFragment(),
+    const TransactionPage(),
+    const PeopleFragment()
   ];
 
   var appTitles = ["", "Transaction", "Contacts", "Profile"];
@@ -38,7 +37,7 @@ class _MyHomePageState extends State<MyIndexPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle(
+        systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.white,
           systemNavigationBarDividerColor: Colors.white,
           systemNavigationBarColor: Colors.white,
@@ -54,7 +53,7 @@ class _MyHomePageState extends State<MyIndexPage> {
                 child: Text(
                   textAlign: TextAlign.center,
                   appTitles[_pages],
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                 ),
               )
             : null,
@@ -63,7 +62,7 @@ class _MyHomePageState extends State<MyIndexPage> {
                 onPressed: () {
                   toggleScreen(_pages - 1);
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Colors.black,
                 ),
@@ -71,8 +70,8 @@ class _MyHomePageState extends State<MyIndexPage> {
             : Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
-                    margin: EdgeInsets.fromLTRB(10, 5, 4, 10),
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.fromLTRB(10, 5, 4, 10),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Image.asset("assets/images/jilo.jpg"),
@@ -81,7 +80,7 @@ class _MyHomePageState extends State<MyIndexPage> {
                   Expanded(
                       child: Container(
                     width: 400,
-                    child: Text(
+                    child: const Text(
                       "Good day\nJilo",
                       style: TextStyle(
                           color: Colors.black,
@@ -96,7 +95,7 @@ class _MyHomePageState extends State<MyIndexPage> {
               onPressed: () {},
               icon: Icon(
                 Icons.notifications_sharp,
-                color: new AppColors().wine,
+                color: AppColors().wine,
               ))
         ],
       ),
@@ -109,15 +108,15 @@ class _MyHomePageState extends State<MyIndexPage> {
           items: [
             BottomNavigationBarItem(
                 icon: IconButton(
-                    color: new AppColors().wine,
+                    color: AppColors().wine,
                     iconSize: 30,
                     onPressed: () {
                       toggleScreen(0);
                     },
-                    splashColor: new AppColors().wine,
+                    splashColor: AppColors().wine,
                     icon: Icon(
                       Icons.home_filled,
-                      color: (_pages == 0) ? new AppColors().wine : Colors.grey,
+                      color: (_pages == 0) ? AppColors().wine : Colors.grey,
                     )),
                 label: "Home"),
             BottomNavigationBarItem(
@@ -126,11 +125,9 @@ class _MyHomePageState extends State<MyIndexPage> {
                     onPressed: () {
                       toggleScreen(1);
                     },
-                    splashColor: new AppColors().wine,
+                    splashColor: AppColors().wine,
                     icon: Icon(Icons.swap_horiz_outlined,
-                        color: (_pages == 1)
-                            ? new AppColors().wine
-                            : Colors.grey)),
+                        color: (_pages == 1) ? AppColors().wine : Colors.grey)),
                 label: "Transaction"),
             BottomNavigationBarItem(
                 icon: IconButton(
@@ -139,9 +136,7 @@ class _MyHomePageState extends State<MyIndexPage> {
                       toggleScreen(2);
                     },
                     icon: Icon(Icons.people,
-                        color: (_pages == 2)
-                            ? new AppColors().wine
-                            : Colors.grey)),
+                        color: (_pages == 2) ? AppColors().wine : Colors.grey)),
                 label: "People"),
             BottomNavigationBarItem(
                 icon: IconButton(
@@ -150,9 +145,7 @@ class _MyHomePageState extends State<MyIndexPage> {
                       toggleScreen(3);
                     },
                     icon: Icon(Icons.person,
-                        color: (_pages == 3)
-                            ? new AppColors().wine
-                            : Colors.grey)),
+                        color: (_pages == 3) ? AppColors().wine : Colors.grey)),
                 label: "Profile"),
           ]),
       // This trailing comma makes auto-formatting nicer for build methods.

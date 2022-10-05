@@ -1,8 +1,4 @@
-import 'package:credio/screens/GroupSavings.dart';
-import 'package:credio/screens/HomPage.dart';
 import 'package:credio/screens/IndexPage.dart';
-import 'package:credio/screens/IntroPage.dart';
-import 'package:credio/screens/Login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Credio',
       theme: ThemeData(accentColor: Colors.white, primaryColor: Colors.white),
-      home: new MyIndexPage(),
+      home: const MyIndexPage(),
     );
   }
 }

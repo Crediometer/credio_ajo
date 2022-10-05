@@ -23,10 +23,17 @@ class _MyHomePageState extends State<TransactionPage> {
         body: Column(
       children: [
         Container(
+          decoration: const BoxDecoration(color: Colors.white),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
+                decoration: (_transaction_selector == 0)
+                    ? BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                width: 2.0, color: AppColors().wine)))
+                    : null,
                 child: TextButton(
                   onPressed: () {
                     updateTransactionDisplay();
@@ -35,25 +42,19 @@ class _MyHomePageState extends State<TransactionPage> {
                     "Previous Ajo",
                     style: TextStyle(
                         color: (_transaction_selector == 0)
-                            ? new AppColors().wine
+                            ? AppColors().wine
                             : Colors.black,
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                decoration: (_transaction_selector == 0)
-                    ? BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                width: 2.0, color: new AppColors().wine)))
-                    : null,
               ),
               Container(
                 decoration: (_transaction_selector == 1)
                     ? BoxDecoration(
                         border: Border(
                             bottom: BorderSide(
-                                width: 2.0, color: new AppColors().wine)))
+                                width: 2.0, color: AppColors().wine)))
                     : null,
                 child: TextButton(
                     onPressed: () {
@@ -63,7 +64,7 @@ class _MyHomePageState extends State<TransactionPage> {
                       "Current Ajo",
                       style: TextStyle(
                           color: (_transaction_selector == 1)
-                              ? new AppColors().wine
+                              ? AppColors().wine
                               : Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
@@ -71,15 +72,14 @@ class _MyHomePageState extends State<TransactionPage> {
               )
             ],
           ),
-          decoration: BoxDecoration(color: Colors.white),
         ),
         SingleChildScrollView(
           child: Container(
             width: double.infinity,
-            decoration: BoxDecoration(color: Colors.white),
+            decoration: const BoxDecoration(color: Colors.white),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 SingleChildScrollView(
@@ -87,15 +87,15 @@ class _MyHomePageState extends State<TransactionPage> {
                     child: Row(
                       children: [
                         Card(
-                          margin: EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                           color: Colors.blue,
                           child: Container(
                             width: 150,
                             height: 150,
-                            padding: EdgeInsets.fromLTRB(0, 15, 0, 30),
-                            margin: EdgeInsets.all(10),
+                            padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
+                            margin: const EdgeInsets.all(10),
                             child: Column(
-                              children: [
+                              children: const [
                                 Text("Group Ajo",
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -123,15 +123,15 @@ class _MyHomePageState extends State<TransactionPage> {
                           ),
                         ),
                         Card(
-                          margin: EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                           color: Colors.green,
                           child: Container(
                             width: 150,
                             height: 150,
-                            padding: EdgeInsets.fromLTRB(0, 15, 0, 30),
-                            margin: EdgeInsets.all(10),
+                            padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
+                            margin: const EdgeInsets.all(10),
                             child: Column(
-                              children: [
+                              children: const [
                                 Text("Personal Saving",
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -160,15 +160,15 @@ class _MyHomePageState extends State<TransactionPage> {
                           ),
                         ),
                         Card(
-                          margin: EdgeInsets.all(10),
+                          margin: const EdgeInsets.all(10),
                           color: Colors.red,
                           child: Container(
                             width: 150,
                             height: 150,
-                            padding: EdgeInsets.fromLTRB(0, 15, 0, 30),
-                            margin: EdgeInsets.all(10),
+                            padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
+                            margin: const EdgeInsets.all(10),
                             child: Column(
-                              children: [
+                              children: const [
                                 Text("Group Ajo",
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -197,13 +197,13 @@ class _MyHomePageState extends State<TransactionPage> {
                         ),
                       ],
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
                   width: double.infinity,
-                  padding: EdgeInsets.all(10),
-                  child: Text(
+                  padding: const EdgeInsets.all(10),
+                  child: const Text(
                     "Recent transactions",
                     textAlign: TextAlign.left,
                     style: TextStyle(
@@ -212,20 +212,17 @@ class _MyHomePageState extends State<TransactionPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Container(
-                  child: SingleChildScrollView(),
+                  child: const SingleChildScrollView(),
                 )
               ],
             ),
           ),
         ),
       ],
-    )
-
-        // This trailing comma makes auto-formatting nicer for build methods.
-        );
+    ));
   }
 }

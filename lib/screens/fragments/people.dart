@@ -12,9 +12,8 @@ class PeopleFragment extends StatefulWidget {
 class _MyHomePageState extends State<PeopleFragment> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

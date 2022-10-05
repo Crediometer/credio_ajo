@@ -68,7 +68,7 @@ class _MyHomePageState extends State<LoginPage> {
                     width: 280,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(4),
-                      color: new AppColors().wine,
+                      color: AppColors().wine,
                     ),
                     child: TextButton(
                         onPressed: () {

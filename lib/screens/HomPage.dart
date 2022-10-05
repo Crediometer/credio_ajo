@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   startTime() async {
-    var duration = Duration(seconds: 5);
+    var duration = const Duration(seconds: 5);
     return Timer(duration, route);
   }
 
