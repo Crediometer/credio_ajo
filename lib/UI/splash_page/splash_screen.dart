@@ -5,10 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../../UI/IntroPage.dart';
 
-void main() {
-  print("object");
-}
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -50,7 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
               fontWeight: FontWeight.bold),
         ),
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
