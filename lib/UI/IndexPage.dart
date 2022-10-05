@@ -1,6 +1,6 @@
-import 'package:credio/screens/fragments/home.dart';
-import 'package:credio/screens/fragments/people.dart';
-import 'package:credio/screens/fragments/transactions.dart';
+import 'package:credio/UI/fragments/home.dart';
+import 'package:credio/UI/fragments/people.dart';
+import 'package:credio/UI/fragments/transactions.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

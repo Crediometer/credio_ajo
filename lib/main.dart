@@ -1,4 +1,4 @@
-import 'package:credio/screens/IndexPage.dart';
+import 'package:credio/UI/IndexPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

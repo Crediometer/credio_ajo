@@ -1,4 +1,4 @@
-import 'package:credio/screens/Login.dart';
+import 'package:credio/UI/Login.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 

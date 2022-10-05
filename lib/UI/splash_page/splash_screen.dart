@@ -1,8 +1,9 @@
 import 'dart:async';
 
-import 'package:credio/screens/IntroPage.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../UI/IntroPage.dart';
 
 void main() {
   print("object");
