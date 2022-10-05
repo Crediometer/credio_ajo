@@ -4,10 +4,6 @@ import 'package:credio/UI/IntroPage.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  print("object");
-}
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
