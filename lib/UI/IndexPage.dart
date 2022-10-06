@@ -1,11 +1,12 @@
-import 'package:credio/UI/fragments/home.dart';
-import 'package:credio/UI/fragments/people.dart';
-import 'package:credio/UI/fragments/transactions.dart';
+import 'package:credio/UI/people_page/people.dart';
+import 'package:credio/UI/transaction_page/transactions.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+
+import 'home_page/home_screen.dart';
 
 class MyIndexPage extends StatefulWidget {
   const MyIndexPage({Key? key}) : super(key: key);
