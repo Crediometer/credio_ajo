@@ -3,7 +3,8 @@ import 'dart:async';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../UI/IntroPage.dart';
+import '../onBoarding_page/onBoarding_screen.dart';
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -29,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.push(
         context,
         MaterialPageRoute(
-            builder: (context) => const IntroPage(
+            builder: (context) => const OnboardingScreen(
                   title: "Credio",
                 )));
   }

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class PeopleFragment extends StatefulWidget {
-  const PeopleFragment({
+class PeopleScreen extends StatefulWidget {
+  const PeopleScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<PeopleFragment> createState() => _MyHomePageState();
+  State<PeopleScreen> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<PeopleFragment> {
+class _MyHomePageState extends State<PeopleScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

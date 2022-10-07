@@ -1,16 +1,16 @@
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 
-class GroupSavings extends StatefulWidget {
-  const GroupSavings({
+class GroupSavingsScreen extends StatefulWidget {
+  const GroupSavingsScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<GroupSavings> createState() => _MyHomePageState();
+  State<GroupSavingsScreen> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<GroupSavings> {
+class _MyHomePageState extends State<GroupSavingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

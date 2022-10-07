@@ -2,14 +2,14 @@ import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class TransactionPage extends StatefulWidget {
-  const TransactionPage({Key? key}) : super(key: key);
+class TransactionScreen extends StatefulWidget {
+  const TransactionScreen({Key? key}) : super(key: key);
 
   @override
-  State<TransactionPage> createState() => _MyHomePageState();
+  State<TransactionScreen> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<TransactionPage> {
+class _MyHomePageState extends State<TransactionScreen> {
   int _transaction_selector = 0;
   void updateTransactionDisplay() {
     setState(() {

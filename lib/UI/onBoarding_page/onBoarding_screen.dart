@@ -1,16 +1,16 @@
-import 'package:credio/UI/Login.dart';
+import 'package:credio/UI/auth_page/Login.dart';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 
-class IntroPage extends StatefulWidget {
-  const IntroPage({Key? key, required this.title}) : super(key: key);
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<IntroPage> createState() => _MyHomePageState();
+  State<OnboardingScreen> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<IntroPage> {
+class _MyHomePageState extends State<OnboardingScreen> {
   PageController controller = PageController();
   final List<Widget> _list = <Widget>[
     Center(
@@ -51,7 +51,6 @@ class _MyHomePageState extends State<IntroPage> {
       ),
     ))
   ];
-  int _curr = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +77,7 @@ class _MyHomePageState extends State<IntroPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const LoginPage(),
+                              builder: (context) => const LoginScreen(),
                             ));
                       },
                       icon: Icon(
@@ -98,7 +97,6 @@ class _MyHomePageState extends State<IntroPage> {
         controller: controller,
         onPageChanged: (num) {
           setState(() {
-            _curr = num;
           });
         },
         children: _list,

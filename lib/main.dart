@@ -1,5 +1,6 @@
-import 'package:credio/UI/IndexPage.dart';
 import 'package:flutter/material.dart';
+
+import 'UI/bottom_navigation_page/bottom_navigation_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Credio',
-      theme: ThemeData(accentColor: Colors.white, primaryColor: Colors.white),
-      home: const MyIndexPage(),
+      theme: ThemeData(
+          primaryColor: Colors.white,
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: Colors.white)),
+      home: const BottomNavigationScreen(),
     );
   }
 }

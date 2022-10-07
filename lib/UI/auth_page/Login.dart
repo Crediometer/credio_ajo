@@ -1,14 +1,14 @@
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _MyHomePageState();
+  State<LoginScreen> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<LoginPage> {
+class _MyHomePageState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +75,7 @@ class _MyHomePageState extends State<LoginPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const LoginPage()));
+                                  builder: (context) => const LoginScreen()));
                         },
                         child: const Text(
                           "Log in",
