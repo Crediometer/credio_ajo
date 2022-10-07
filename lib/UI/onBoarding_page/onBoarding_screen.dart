@@ -96,8 +96,7 @@ class _MyHomePageState extends State<OnboardingScreen> {
         // physics: BouncingScrollPhysics(),
         controller: controller,
         onPageChanged: (num) {
-          setState(() {
-          });
+          setState(() {});
         },
         children: _list,
       ),
