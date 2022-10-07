@@ -3,8 +3,9 @@ import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const OnboardingScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<OnboardingScreen> createState() => _MyHomePageState();

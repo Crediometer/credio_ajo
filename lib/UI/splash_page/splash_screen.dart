@@ -5,15 +5,16 @@ import 'package:flutter/material.dart';
 
 import '../onBoarding_page/onBoarding_screen.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -26,12 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   route() {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => const OnboardingScreen(
-                  title: "Credio",
-                )));
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => const OnboardingScreen()));
   }
 
   @override

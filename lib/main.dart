@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'UI/bottom_navigation_page/bottom_navigation_screen.dart';
+import 'UI/splash_page/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.white,
           colorScheme:
               ColorScheme.fromSwatch().copyWith(secondary: Colors.white)),
-      home: const BottomNavigationScreen(),
+      home: const SplashScreen(),
     );
   }
 }
