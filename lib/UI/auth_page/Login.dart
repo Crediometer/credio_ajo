@@ -65,22 +65,20 @@ class _MyHomePageState extends State<LoginScreen> {
                   ),
                 ),
                 Container(
-                    width: 280,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
-                      color: AppColors().wine,
-                    ),
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const LoginScreen()));
-                        },
-                        child: const Text(
-                          "Log in",
-                          style: TextStyle(color: Colors.white),
-                        ))),
+                  width: 280,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    color: AppColors().wine,
+                  ),
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed("/LoginScreen");
+                      },
+                      child: const Text(
+                        "Log in",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
                   child: Row(

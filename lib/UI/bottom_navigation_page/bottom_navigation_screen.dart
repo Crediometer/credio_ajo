@@ -149,7 +149,6 @@ class _MyHomePageState extends State<BottomNavigationScreen> {
                         color: (_pages == 3) ? AppColors().wine : Colors.grey)),
                 label: "Profile"),
           ]),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

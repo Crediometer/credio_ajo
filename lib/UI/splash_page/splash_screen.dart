@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:credio/values/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../onBoarding_page/onBoarding_screen.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({
     Key? key,
@@ -27,8 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   route() {
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) => const OnboardingScreen()));
+    Navigator.of(context).pushNamed("/OnBoarding");
   }
 
   @override
